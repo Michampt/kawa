@@ -36,9 +36,9 @@ jobs:
     - name: Upload Client
       uses: actions/upload-artifact@v2
       with:
-        path: ./kawa-client/out/kawa
+        path: ./out/kawa
     - name: Upload Utils
       uses: actions/upload-artifact@v2
       with:
-        path: ./kawa-utils/out/kawa-utils
+        path: ./out/kawa-utils
         
