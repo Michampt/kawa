@@ -21,16 +21,14 @@ jobs:
     - name: Build Utils
       run: |
         cd ./kawa-utils
-        if [ -e out ]; then rm -rf out; fi
-        mkdir out
-        go build -o out/kawa-utils -v ...
+        if [ ! -e out ]; then mkdir out; fi
+        go build -o ../out/kawa-utils -v ...
 
     - name: Build Client
       run: |
         cd ./kawa-client
-        if [ -e out ]; then rm -rf out; fi
-        mkdir out
-        go build -o out/kawa -v ...
+        if [ ! -e out ]; then mkdir out; fi
+        go build -o ../out/kawa -v ...
 
   release:
     runs-on: ubuntu-latest
