@@ -1,0 +1,29 @@
+{
+    "name": "test-module",
+    "version": "0.0.1",
+    "description": "Test Module",
+    "author": "Michael Hampton",
+    "repo": "github.com",
+    "files": [
+        {
+            "filename": "test.css",
+            "hash": "0878ecb7c84cf398d93188086061fcb7969f619f5690edbe1c6bcc32318590ee"
+        },
+        {
+            "filename": "test.html",
+            "hash": "b633a587c652d02386c4f16f8c6f6aab7352d97f16367c3c40576214372dd628"
+        },
+        {
+            "filename": "mura-module.json",
+            "hash": "84ec2c24e24ab84cfdda6abf2fa89c74bd7ab3ff22aa5af83d2ed91940b87426"
+        },
+        {
+            "filename": "package.json",
+            "hash": "01a6af6e46baedb7e1551f5e59f3ff6626affa1e8d276c5eb3ad4f216d9599d0"
+        },
+        {
+            "filename": "test.text",
+            "hash": "2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824"
+        }
+    ]
+}
