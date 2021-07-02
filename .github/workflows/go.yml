@@ -20,15 +20,15 @@ jobs:
 
     - name: Build Utils
       run: |
-        cd ./kawa-utils
         if [ ! -e out ]; then mkdir out; fi
-        go build -o ../out/kawa-utils -v ...
+        cd ./kawa-utils
+        go build -o ../out/kawa-utils -v *.go
 
     - name: Build Client
       run: |
-        cd ./kawa-client
         if [ ! -e out ]; then mkdir out; fi
-        go build -o ../out/kawa -v ...
+        cd ./kawa-client
+        go build -o ../out/kawa -v *.go
 
   release:
     runs-on: ubuntu-latest
@@ -37,6 +37,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         path: ./out/kawa
+        
     - name: Upload Utils
       uses: actions/upload-artifact@v2
       with:
