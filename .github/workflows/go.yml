@@ -19,7 +19,18 @@ jobs:
         go-version: 1.16
 
     - name: Build Utils
-      run: cd ./kawa-utils && go build -v ...
+      run: cd ./kawa-utils && mkdir out && go build -o out/kawa-utils -v ...
 
     - name: Build Client
-      run: cd ./kawa-client && go build -v ...
+      run: cd ./kawa-client && mkdir out && go build -o out/kawa -v ...
+
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        path: |
+            ./kawa-client/out/kawa
+            ./kawa-utils/out/kawa-utils
+        
