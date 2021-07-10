@@ -182,16 +182,16 @@ func main() {
 	currentDir, err := os.Getwd()
 	check(err)
 
+	command := flag.Args()[0]
 	serve := flag.Bool("s", false, "Whether to start the server or not")
 	serverDirectory := flag.String("d", currentDir, "Directory to serve from")
 	flag.Parse()
 
-	switch *serve {
-	case false:
+	if command == "scan" {
 		createManifest()
-		break
-	case true:
+	}
+
+	if *serve {
 		startModuleServer(*serverDirectory)
-		break
 	}
 }
